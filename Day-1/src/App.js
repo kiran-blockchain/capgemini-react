@@ -38,21 +38,35 @@ const App = () => {
     text: "Others"
   }
   ];
-  const fetchUpdates = (data) => {
-    updateUserInfo(data);//update state object 
-  }
   const countrySelect = (data) => {
     selectCountry(data);
   }
   const genderSelect = (data) => {
     selectGender(data);
   }
+  const genderDropdown = {
+    className:'form-control',
+    name:'gender',
+    dataList:genderList,
+    selected: genderSelect
+  }
+  const countryDropdown = {
+    className:'form-control',
+    name:'country',
+    dataList:countryList,
+    selected: countrySelect
+  }
+ 
+  const fetchUpdates = (data) => {
+    updateUserInfo(data);//update state object 
+  }
+
   return (
     <div className="container">
       {/* <Header company={companyName} location={address}/> */}
       <div>
-        <Dropdown dataList={countryList} selected={countrySelect} />
-        <Dropdown dataList={genderList} selected={genderSelect} />
+        <Dropdown dropdown ={genderDropdown}/>
+        <Dropdown dropdown={countryDropdown} />
         <div>
           <h6>Gender :{selectedGender}</h6>
           <h6>Country :{selectedCountry}</h6>
