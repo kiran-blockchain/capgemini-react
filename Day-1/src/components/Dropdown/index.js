@@ -9,7 +9,7 @@ const onOptionSelect = (e)=>{
 const bindOptions = ()=>{
     return props.dropdown.dataList.map((item,index)=>{
         return (
-            <option value={item.value}>{item.text}</option>
+            <option key={index} value={item.value}>{item.text}</option>
         )
     })
 }

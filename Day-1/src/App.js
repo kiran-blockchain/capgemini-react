@@ -9,6 +9,7 @@ import { useState } from "react";
 import Display from "./components/Display";
 import Toggle from "./components/Toggle";
 import Dropdown from "./components/Dropdown";
+import Radio from "./components/Radio";
 const App = () => {
   const companyName = "Capgeminiiiii";
   const address = "India";
@@ -44,8 +45,8 @@ const App = () => {
   const genderSelect = (data) => {
     selectGender(data);
   }
-  const genderDropdown = {
-    className:'form-control',
+  const genderRadio = {
+    className:"form-check form-check-inline",
     name:'gender',
     dataList:genderList,
     selected: genderSelect
@@ -65,8 +66,8 @@ const App = () => {
     <div className="container">
       {/* <Header company={companyName} location={address}/> */}
       <div>
-        <Dropdown dropdown ={genderDropdown}/>
-        <Dropdown dropdown={countryDropdown} />
+        <Dropdown dropdown ={countryDropdown}/>
+        <Radio radio={genderRadio} />
         <div>
           <h6>Gender :{selectedGender}</h6>
           <h6>Country :{selectedCountry}</h6>
