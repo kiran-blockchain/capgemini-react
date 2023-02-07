@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Textbox = () => {
+const Textbox = (props) => {
     const userObj = {
         username: "",
         password:"",
@@ -15,6 +15,7 @@ const Textbox = () => {
         let tempuser = { ...user };
         tempuser[e.target.name] = e.target.value // identifying the generic control
         updateDetails(tempuser)//state updation
+        props.update(tempuser)
     }
     return (
         <div className="row">
@@ -44,6 +45,7 @@ const Textbox = () => {
                     name="age"
                     onChange={updateUserDetails}
                     placeholder="Enter Age" />
+                    
             </div>
             <div class="col-sm-3">
             <label for="password"

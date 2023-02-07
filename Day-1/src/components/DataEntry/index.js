@@ -1,0 +1,3 @@
+const DataEntry =()=>{
+    const [userInfo,]
+}
