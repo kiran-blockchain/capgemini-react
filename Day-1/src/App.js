@@ -68,6 +68,7 @@ const App = () => {
       <div>
         <Dropdown dropdown ={countryDropdown}/>
         <Radio radio={genderRadio} />
+      
         <div>
           <h6>Gender :{selectedGender}</h6>
           <h6>Country :{selectedCountry}</h6>

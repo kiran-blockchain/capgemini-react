@@ -14,7 +14,8 @@ const Radio = (props)=>{
                 value={item.value}
                 onChange={selectChoice}
                 />       
-                <label class="form-check-label" key={props.radio.name+index} for={props.radio.name+index}>{item.text}</label>
+                <label class="form-check-label" key={props.radio.name+index}
+                 for={props.radio.name+index}>{item.text}</label>
                 </>)
             })}
         </div>
